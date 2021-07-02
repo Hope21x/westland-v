@@ -41,7 +41,7 @@ export const HeaderWrap = styled(motion.div)`
         width: 100%;
 
     }
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 480px){
         margin: 12rem 0 1rem 3.5rem;
         width: 100%;
     }
@@ -63,7 +63,7 @@ export const HeaderTitle = styled(motion.h1)`
         width: 100%;
         margin-top: 10px;
     }
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 480px){
         width: 68%;
     }
 
@@ -90,9 +90,9 @@ export const HeaderIntro = styled(motion.p)`
         width: 50ch;
         margin-bottom: 3rem;
     }
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 480px){
         font-size: 19px;
-        width: 32ch;
+        width: 28ch;
     }
 
 
@@ -118,7 +118,7 @@ export const Button = styled.button`
         padding-right: 10px;
 
     }
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 480px){
         font-size: 13.4px;
     }
 

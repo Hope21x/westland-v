@@ -28,7 +28,7 @@ export const NavbarContainer = styled.nav`
 
 
     @media screen and (max-width: 500px){ 
-        display: none !important;
+        display: none;
     }
     
     

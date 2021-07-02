@@ -9,7 +9,6 @@ const SideBarAnimate = ({ children, isOpen}) => {
     return (
 
         <AnimatePresence >
-
             {
                 isOpen && <AlphaSideBarContainer
                     initial='hidden'
@@ -20,7 +19,6 @@ const SideBarAnimate = ({ children, isOpen}) => {
                     {children}
                 </AlphaSideBarContainer>
             }
-
         </AnimatePresence>
 
 
@@ -30,6 +28,9 @@ const SideBarAnimate = ({ children, isOpen}) => {
 const AlphaSideBarContainer = styled(motion.div)`
     width: 100vw;
     height: max-content;
+    @media screen and (max-width: 480px){
+        width: 143vw;
+    }
 
 `
 

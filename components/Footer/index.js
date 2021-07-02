@@ -47,6 +47,7 @@ const FooterSvgContainer = styled.div`
         justify-content: center;
         align-items: center;
         right: -19px;
+        width: 12rem;
     }
 `
 

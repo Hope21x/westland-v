@@ -37,11 +37,14 @@ export const logoVariantContainer = {
 }
 export const heightVariant = {
     hidden: {
-        background: 'transparent'
+        background: 'transparent',
+        height: '',
+        opacity: 0
     },
     show: {
-        height: ' ',
+        height: '10vh',
         background: '#18181a',
+        opacity: 1,
         transition: {
             duration: 1,
             ease: [.6, .01, -.05, .95]

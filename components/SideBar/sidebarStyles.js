@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 
 
 export const EmailText = styled(motion.h2)`
@@ -14,6 +13,14 @@ export const EmailText = styled(motion.h2)`
         white-space: nowrap;
         top: 8rem;
         font-size: 13px;
+    }
+
+
+    @media screen and (max-width: 480px){
+        position: absolute;
+        left: 10rem;
+        top: 7rem;
+        font-size: .6rem;
     }
 
 
@@ -32,6 +39,12 @@ export const EmailContainer = styled(motion.div)`
         left: 4%;
     }
 
+    @media screen and (max-width: 480px){
+        top: -16%;
+        left: 10px;
+
+    }
+
 `
 
 export const EmailDivider = styled(motion.div)`
@@ -39,6 +52,9 @@ export const EmailDivider = styled(motion.div)`
     width: 120px;
     background-color: white;
     margin: 25px 0 20px 0;
+    @media screen and (max-width: 480px){
+        display: none;
+    }
 `
 
 export const Phone = styled(motion.li)`
@@ -50,7 +66,7 @@ export const Phone = styled(motion.li)`
     font-weight: bold;
     margin-bottom: 10px;
     transition: all .2s cubic-bezier(.25,.46,.45,.94);
-    cursor:default ;
+    cursor: default;
     color: #ccc;
 
 
@@ -74,6 +90,13 @@ export const Phone = styled(motion.li)`
         font-size: 1rem;
 
     }
+    @media screen and (max-width: 480px){
+        position: absolute;
+        left: 9.1rem;
+        top: 12rem;
+        font-size: .9rem;
+    }
+
 
 
 
@@ -93,6 +116,12 @@ export const PhoneText = styled(motion.h2)`
         white-space: nowrap;
         top: 8rem;
         font-size: 13px;
+    }
+    @media screen and (max-width: 480px){
+        position: absolute;
+        left: 9.5rem;
+        top: 13.5rem;
+        font-size: .6rem;
     }
 
 `
@@ -130,6 +159,14 @@ export const Email = styled(motion.li)`
 
     }
 
+    @media screen and (max-width: 480px){
+        position: absolute;
+        left: 6.7rem;
+        top: 5.5rem;
+        font-size: .9rem;
+    }
+
+
 `
 export const SideLeft = styled(motion.div)`
     position: absolute;
@@ -141,6 +178,9 @@ export const SideLeft = styled(motion.div)`
     background: #212124;
     @media screen and (max-width: 768px){
         left: -10rem;
+    }
+    @media screen and (max-width: 500px){
+        display: none;
     }
 
 `
@@ -164,9 +204,10 @@ export const SideBarMenu = styled(motion.div)`
     height: 100vh;
     background: #29292b;
     transition: all .9s cubic-bezier(.25,.46,.45,.94);
-    @media screen and (max-width: 768px){
-
+    @media screen and (max-width: 500px){
+        
     }
+
 
 `
 export const SideRight = styled(motion.div)`
@@ -189,7 +230,7 @@ export const SideBarLinks = styled(motion.ul)`
     grid-template-rows: repeat( auto-fit, minmax(120px 1fr));
     font-size: 4.5rem;
     list-style: none;
-    white-space:nowrap;
+    white-space: nowrap;
     letter-spacing: 2px;
     padding: 0 0 0 120px;
     transition: all .4s cubic-bezier(.25,.46,.45,.94);
@@ -197,11 +238,17 @@ export const SideBarLinks = styled(motion.ul)`
         font-size: 3rem;
         padding-left: 40px;
         margin-bottom: 8rem;
-        height: 40vh;
+        
+    }
+
+    @media screen and (max-width: 480px){
+        font-size: 32px;
+        margin-bottom: 4rem;
+        padding-left: 5.4rem;
         
         
     }
-    
+
 
         
 `
@@ -216,11 +263,7 @@ export const Links = styled(motion.li)`
     text-decoration: none;
     font-family: Impact, Haettenschweiler, sans-serif;
     transition: all .15s cubic-bezier(.25,.46,.45,.94);
-    &:visited{
-        padding-left: 30px;
-        border-left: 10px solid white;
-        margin-left: 4px
-    }
+
     
 
 
@@ -229,21 +272,30 @@ export const Links = styled(motion.li)`
 
     
     &:hover{
-        background: linear-gradient(to bottom right, #BFACCCDA 0%, #5FB9CF71 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        background: white;
         transition: all .25s cubic-bezier(.25,.46,.45,.94);
         padding-left: 20px;
         border-left: 1px solid white;
         margin-left: 4px;
+        border-radius: 0 10px 10px 0;
+
+        a {
+            color: black;
+        }
         
     }
 
-    a{
+    a {
         color: grey;
         &:active{
-            color: white;
+            color: #ccc;
+        }
+        &:visited{
+            background: white;
+            transition: all .25s cubic-bezier(.25,.46,.45,.94);
+            padding-left: 20px;
+            border-left: 1px solid white;
+            margin-left: 4px;
         }
     }
     
@@ -251,6 +303,13 @@ export const Links = styled(motion.li)`
 
     @media screen and (max-width: 768px){
         margin-bottom: 24px;
+    }
+
+    @media screen and (max-width: 480px){
+        font-family: nudista-web,sans-serif;
+        font-weight: 550;
+        margin-bottom: 15px;
+   
     }
 
 

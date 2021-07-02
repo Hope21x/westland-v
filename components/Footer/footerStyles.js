@@ -13,6 +13,9 @@ export const Social = styled(motion.ul)`
         position: absolute;
         right: -3.6rem;
     }
+    @media screen and (max-width: 500px){
+        right: -4.1rem;
+    }
 
 
 `
@@ -83,8 +86,12 @@ export const MiddleLine = styled(motion.div)`
     background-color: grey;
     width: 1px;
     @media screen and (max-width: 768px){
-        width: 0;
+        display: none !important;
     }
+    @media screen and (max-width: 500px){
+        display: none !important;
+    }
+
 `
 
 
@@ -105,6 +112,13 @@ export const FooterContainer = styled.div`
         align-items: center;
 
     }
+    @media screen and (max-width: 768px){
+        display: flex;
+        flex-direction: column;
+        min-height: 54vh;
+        padding-top: -4rem;
+        justify-content: center;
+    }
 
     
 `
@@ -121,6 +135,8 @@ export const FooterContent = styled.div`
 
     }
 
+    
+
 
 
 `
@@ -132,6 +148,9 @@ export const FooterLogo = styled.div`
     @media screen and (max-width: 768px){
         margin-right: 1rem;
         margin-top: -3rem;
+    }
+    @media screen and (max-width: 500px){
+        margin-right: -1rem;
     }
     
 `
@@ -146,6 +165,12 @@ export const FooterRights = styled.div`
     @media screen and (max-width: 768px){
         margin-top: 13rem;
         font-size: 12px;
+
+    }
+    @media screen and (max-width: 500px){
+        font-size: 11px;
+        position: absolute;
+        left: -20px;
     }
 
 `

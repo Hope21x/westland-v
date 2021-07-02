@@ -68,6 +68,11 @@ const SideBarFooterSvg = styled.div`
         width: 11.8rem;
         left: 2.45rem;
     }
+    @media screen and (min-width: 380px) and (max-width: 480px){
+        width: 11rem;
+        left: 5.2rem;
+        top: 8rem;
+    }
 `
 
 
@@ -79,6 +84,12 @@ const SideBarRightResponsive = styled.div`
     width: 100vw;
     height: 30vh;
     background-color: #262628;
+    @media screen and (min-width: 380px) and (max-width: 480px){
+        position: absolute;
+        left: 0;
+        width: 109vw;
+    }
+
     
 `
 

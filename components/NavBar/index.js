@@ -34,25 +34,29 @@ const NavBar = () => {
     };
 
 
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
     return (
         <>
             <SideBar isOpen={isOpen} />
             {
-                isMobile && (<>
-                    <NavbarContainerRes variants={heightVariant} layout scrollPosition={scrollPosition} initial='hidden' animate='show'>
-                        <NavBarItemsRes>
-                            <NavIcon variants={logoVariantContainer} initial='hidden' animate='show'>
-                                <motion.h1 variants={logoVariant}>LOGO</motion.h1>
-                            </NavIcon>
-                            <NavButtonRes layout>
-                                <NavButton isOpen={isOpen} toggleOpen={toggleOpen} />
-                            </NavButtonRes>
-                        </NavBarItemsRes>
-                    </NavbarContainerRes>
-
-                </>)
+                mounted &&
+                isMobile &&
+                <NavbarContainerRes layout variants={heightVariant} isOpen={isOpen} scrollPosition={scrollPosition} initial='hidden' animate='show'>
+                    <NavBarItems>
+                        <NavIcon variants={logoVariantContainer} initial='hidden' animate='show'>
+                            <motion.h1 variants={logoVariant}>LOGO</motion.h1>
+                        </NavIcon>
+                        <NavBarButtonres>
+                            <NavButton isOpen={isOpen} toggleOpen={toggleOpen} />
+                        </NavBarButtonres>
+                    </NavBarItems>
+                </NavbarContainerRes>
             }
-            <NavbarContainer  >
+            <NavbarContainer>
                 <NavBarItems >
                     <NavIcon variants={logoVariantContainer} initial='hidden' animate='show'>
                         <motion.h1 variants={logoVariant}>LOGO</motion.h1>
@@ -67,30 +71,26 @@ const NavBar = () => {
         </>
     )
 }
-const NavBarItemsRes = styled.div`
-    max-width: 100%;
-    height: ${props => props.scrollPosition > 10 ? '0' : '10vh'};
-
-`
 const NavbarContainerRes = styled(motion.nav)`
     display: flex;
-    flex-direction: column;
     position: fixed;
-    top: ${props => props.scrollPosition > 130 ? '-5rem':'0'};
+    top: ${props => props.scrollPosition > 130 ? '-5rem' : '0'};
+    top: ${props => props.isOpen && '0'};
     left: 0;
-    z-index: 2;
-    margin-bottom: -50px;
     right: 0;
+    z-index: 2;
     height: 10vh;
-    max-width: 100%;
-    background: #18181a;
 `
-const NavButtonRes = styled.div`
-    position: relative;
-    right: -25rem;
-    top: -1.7rem;
+
+const NavBarButtonres = styled.div`
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: -2px;
 
 `
+
+
 
 
 

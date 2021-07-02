@@ -41,7 +41,7 @@ export const NavMenu = styled.div`
     cursor: pointer;
     margin-bottom: 20px;
     z-index: 300;
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 480px){
         width: 27px;
         ${Menu}{
         &:nth-child(1){
@@ -59,13 +59,13 @@ export const NavMenu = styled.div`
     }
     &:hover ${Menu}{
         &:nth-child(1){
-            top: ${props => props.isOpen ? '18px' : '-2px'};
+            top: ${props => props.isOpen ? '10px' : '-2px'};
             transform: ${props => props.isOpen ? `rotate(45deg)` : ''};
         }
 
     
         &:nth-child(3){
-            top: ${({ isOpen }) => isOpen ? '18px' : '22px'};
+            top: ${({ isOpen }) => isOpen ? '10px' : '22px'};
             transform: ${props => props.isOpen ? `rotate(136deg)` : ''};
         }
     }
